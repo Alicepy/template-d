@@ -3,7 +3,7 @@
  * @Author: zhangxuelian
  * @Date: 2017-09-13 11:14:46
  * @Last Modified by: chenpeiyu
- * @Last Modified time: 2019-03-12 19:42:26
+ * @Last Modified time: 2019-03-12 20:12:20
  **/
 require.config({
     baseUrl: "",
@@ -22,13 +22,15 @@ require.config({
         "jquery": "bower_components/lib/jquery/jquery-1.10.2.min",
         "jquery-1.8.3": "bower_components/lib/jquery/jquery-1.8.3",
         "jquery-ui": "bower_components/lib/jquery-ui/jquery-ui",
+        "lodash": "bower_components/lib/lodash/dist/lodash",
         "restangular": "bower_components/lib/restangular/dist/restangular",
         "angular-ui-bootstrap-tpls": "bower_components/lib/angular-ui-bootstrap/ui-bootstrap-tpls-0.12.0",
-        "angular-ui-tree": "bower_components/lib/angular-ui-tree-master/dist/angular-ui-tree-forie8"
+        "angular-ui-tree": "bower_components/lib/angular-ui-tree-master/dist/angular-ui-tree-forie8",
+        'artDialog': 'bower_components/lib/artDialog/js/dialog-plus-min'
     },
     shim: {
         "angular": {
-            deps: ['jquery','json3'],
+            deps: ['jquery'],
             exports: "angular"
         },
         "angular-ui-router": [
@@ -49,7 +51,8 @@ require.config({
         ],
         "jquery-ui": [
             "jquery"
-        ]
+        ],
+        "artDialog":["jquery"]
     },
     packages:[{
 		name : 'app',

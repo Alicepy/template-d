@@ -3,7 +3,7 @@
  * @Author: zhangxuelian 
  * @Date: 2017-09-14 09:32:34 
  * @Last Modified by: chenpeiyu
- * @Last Modified time: 2019-03-11 14:21:13
+ * @Last Modified time: 2019-03-12 20:08:29
  **/
 require(['angular'], function () {
     require([
@@ -38,7 +38,7 @@ require(['angular'], function () {
         'bower_components/common/filters/filters'
 
     ], function () {
-        require(['app/common/app', 'angular', 'angular-couch-potato','layer'], function (app, angular, couchPotato) {
+        require(['app/common/app', 'angular', 'angular-couch-potato'], function (app, angular, couchPotato) {
 
             var main = angular.module('main', [
                 'scs.couch-potato',
@@ -48,7 +48,7 @@ require(['angular'], function () {
                 'exception',
                 'angularShiro',
                 'constants',
-                'ngCookies',
+                // 'ngCookies',
                 'app',
                 'ngCookies'
             ]);
