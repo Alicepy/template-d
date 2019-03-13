@@ -17,5 +17,5 @@ module.exports = {
             "message": "Author"
         }
     },
-    "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  npm install\n"
+    "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  npm install\n bower install\n"
 }
