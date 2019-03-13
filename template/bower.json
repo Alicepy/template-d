@@ -1,0 +1,21 @@
+{
+  "name": "template-e",
+  "description": "bower",
+  "main": "index.js",
+  "authors": [
+    "chen"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Alicepy/template-e",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "fancybox": "^3.5.7"
+  }
+}
