@@ -4,13 +4,13 @@ module.exports = {
             "type"    : "string",
             "required": false,
             "message" : "Project name",
-            "default" : "ts-tools"
+            "default" : "my-project"
         },
         "description": {
             "type"    : "string",
             "required": false,
             "message" : "Project description",
-            "default" : "A new typescript project"
+            "default" : "A new base angularjs project"
         },
         "author": {
             "type"   : "string",
