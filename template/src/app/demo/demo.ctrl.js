@@ -3,7 +3,7 @@
  * @Author: zhangxuelian 
  * @Date: 2018-01-02 14:08:09 
  * @Last Modified by: chenpeiyu
- * @Last Modified time: 2019-03-06 16:51:17
+ * @Last Modified time: 2019-03-14 17:22:32
  **/
 
 define(['app/common/app'], function (app) {
@@ -13,6 +13,7 @@ define(['app/common/app'], function (app) {
             init:function(){
                 this.getTableData();
             },
+            str:'测试guolvqi',
             params : {
                 data: {
                     centerCode:subject.currentCenterCode,

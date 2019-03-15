@@ -3,7 +3,7 @@
  * @Author: zhangxuelian 
  * @Date: 2017-09-14 09:32:34 
  * @Last Modified by: chenpeiyu
- * @Last Modified time: 2019-03-12 20:08:29
+ * @Last Modified time: 2019-03-14 17:30:55
  **/
 require(['angular'], function () {
     require([
@@ -16,7 +16,7 @@ require(['angular'], function () {
         'app/common/constants',
         'app/common/models',
 
-        'bower_components/common/exception/index',
+        // 'bower_components/common/exception/index',
 
         'bower_components/common/services/date_util',
         'bower_components/common/services/normal_util',
@@ -35,7 +35,7 @@ require(['angular'], function () {
         'bower_components/common/directives/repeat_finish',
         'bower_components/common/directives/accordion_menu',
 
-        'bower_components/common/filters/filters'
+        'bower_components/gx-filters/gx-filters'
 
     ], function () {
         require(['app/common/app', 'angular', 'angular-couch-potato'], function (app, angular, couchPotato) {
@@ -45,10 +45,9 @@ require(['angular'], function () {
                 'ui.router',
                 'models',
                 'ui.bootstrap',
-                'exception',
+                // 'exception',
                 'angularShiro',
                 'constants',
-                // 'ngCookies',
                 'app',
                 'ngCookies'
             ]);

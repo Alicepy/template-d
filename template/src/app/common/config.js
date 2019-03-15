@@ -3,7 +3,7 @@
  * @Author: zhangxuelian
  * @Date: 2017-09-13 11:14:46
  * @Last Modified by: chenpeiyu
- * @Last Modified time: 2019-03-12 20:12:20
+ * @Last Modified time: 2019-03-14 17:29:19
  **/
 require.config({
     baseUrl: "",
@@ -65,7 +65,7 @@ require.config({
 		location : 'bower_components/common/services'
 	},{
 		name : 'filters',
-		location : 'bower_components/common/filters'
+		location : 'bower_components/common/gx-filters'
 	},{
 		name : 'directives',
 		location : 'bower_components/common/directives'
