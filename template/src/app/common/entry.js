@@ -3,7 +3,7 @@
  * @Author: zhangxuelian 
  * @Date: 2017-09-14 09:32:34 
  * @Last Modified by: chenpeiyu
- * @Last Modified time: 2019-03-14 17:30:55
+ * @Last Modified time: 2019-03-15 16:52:49
  **/
 require(['angular'], function () {
     require([
@@ -35,7 +35,7 @@ require(['angular'], function () {
         'bower_components/common/directives/repeat_finish',
         'bower_components/common/directives/accordion_menu',
 
-        'bower_components/gx-filters/gx-filters'
+        'bower_components/common/filters/filters'
 
     ], function () {
         require(['app/common/app', 'angular', 'angular-couch-potato'], function (app, angular, couchPotato) {
