@@ -37,7 +37,7 @@
     "karma-jasmine": "^2.0.1"
   },
   "dependencies": {
-    "lib": "~2.0.10",
+    "lib": "^1.0.10",
     "gx-common": "~1.0.3"
   }
 }
