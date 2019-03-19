@@ -2,12 +2,11 @@
   "name": "11",
   "version": "1.0.0",
   "description": "{{description}}",
-  "main": "index.js",
   "scripts": {
     "postinstall": "npm run copy-libs",
     "update-deps": "npm update",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "copy-libs": "cpx \"node_modules/{common,lib}/**/*\" src/bower_components",
+    "copy-libs": "cpx \"node_modules/{lib,gx-common}/**/*\" src/bower_components",
     "pretest": "npm install"
   },
   "keywords": [],
@@ -16,6 +15,7 @@
   "devDependencies": {
     "cpx": "^1.5.0",
     "gulp": "^3.9.1",
+    "gulp-changed": "^3.2.0",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.7.0",
@@ -37,7 +37,7 @@
     "karma-jasmine": "^2.0.1"
   },
   "dependencies": {
-    "common": "^1.0.0",
-    "lib": "^1.0.1"
+    "lib": "^1.0.1",
+    "gx-common": "~1.0.1"
   }
 }

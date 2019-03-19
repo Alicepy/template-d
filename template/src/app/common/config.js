@@ -3,7 +3,7 @@
  * @Author: zhangxuelian
  * @Date: 2017-09-13 11:14:46
  * @Last Modified by: chenpeiyu
- * @Last Modified time: 2019-03-14 17:29:19
+ * @Last Modified time: 2019-03-19 09:01:27
  **/
 require.config({
     baseUrl: "",
@@ -58,17 +58,17 @@ require.config({
 		name : 'app',
 		location : 'app'
 	},{
-		name : 'common',
-		location : 'bower_components/common'
+		name : 'gx-common',
+		location : 'bower_components/gx-common'
 	},{
-		name : 'services',
-		location : 'bower_components/common/services'
+		name : 'gx-services',
+		location : 'bower_components/gx-common/gx-services'
 	},{
-		name : 'filters',
-		location : 'bower_components/common/gx-filters'
+		name : 'gx-filters',
+		location : 'bower_components/gx-common/gx-filters'
 	},{
-		name : 'directives',
-		location : 'bower_components/common/directives'
+		name : 'gx-directives',
+		location : 'bower_components/gx-common/gx-directives'
 	},{
         name : 'lib',
         location : 'bower_components/lib'

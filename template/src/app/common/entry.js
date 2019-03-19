@@ -3,7 +3,7 @@
  * @Author: zhangxuelian 
  * @Date: 2017-09-14 09:32:34 
  * @Last Modified by: chenpeiyu
- * @Last Modified time: 2019-03-15 16:52:49
+ * @Last Modified time: 2019-03-18 20:47:47
  **/
 require(['angular'], function () {
     require([
@@ -12,30 +12,13 @@ require(['angular'], function () {
         'angular-ui-bootstrap-tpls',
         'angular-shiro',
         'angular-cookies',
-
         'app/common/constants',
         'app/common/models',
 
         // 'bower_components/common/exception/index',
-
-        'bower_components/common/services/date_util',
-        'bower_components/common/services/normal_util',
-        'bower_components/common/services/modal_ext',
-        'bower_components/common/services/common_util',
+    
         
-        'bower_components/common/services/ui-bootstrap-locale_zh-cn',
-
-        'bower_components/common/directives/common_table',
-        'bower_components/common/directives/common_table_add',
-        'bower_components/common/directives/common_select',
-        'bower_components/common/directives/common_select_ext',
-        'bower_components/common/directives/simple_panigation',
-        'bower_components/common/directives/common_list',
-        'bower_components/common/directives/common-ratio-tool',
-        'bower_components/common/directives/repeat_finish',
-        'bower_components/common/directives/accordion_menu',
-
-        'bower_components/common/filters/filters'
+        'bower_components/gx-common/gx-common'
 
     ], function () {
         require(['app/common/app', 'angular', 'angular-couch-potato'], function (app, angular, couchPotato) {
@@ -50,6 +33,7 @@ require(['angular'], function () {
                 'constants',
                 'app',
                 'ngCookies'
+               
             ]);
             couchPotato.configureApp(app);
             main.config(function ($httpProvider) {

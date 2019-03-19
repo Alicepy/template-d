@@ -3,7 +3,7 @@
  * @Author: zhangxuelian 
  * @Date: 2018-01-02 14:08:09 
  * @Last Modified by: chenpeiyu
- * @Last Modified time: 2019-03-14 17:22:32
+ * @Last Modified time: 2019-03-18 19:43:41
  **/
 
 define(['app/common/app'], function (app) {
@@ -12,6 +12,23 @@ define(['app/common/app'], function (app) {
         var baseConfig=$scope.baseConfig ={
             init:function(){
                 this.getTableData();
+            },
+            example:{
+                data:[
+                    {'value':'test1','label':'测试1'},
+                    {'value':'test2','label':'测试2'},
+                    {'value':'test3','label':'测试3'},
+                    {'value':'test4','label':'测试4'},
+                ],
+                valueField : 'value',
+                textField : 'label',
+                panelHeight:"auto",
+                onSelect:function(row){
+                    console.log('选择了'+row.value);
+                },
+                clearAll:function(){
+                    console.log('取消选择');
+                }
             },
             str:'测试guolvqi',
             params : {

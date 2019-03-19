@@ -17,7 +17,8 @@ gulp.task('clean', function () {
 // 包管理文件
 gulp.task('vendor',function () {
     return gulp.src(['src/bower_components/**/*'])
-      .pipe(gulp.dest(app.prdPath + '/bower_components'))
+        .pipe($.changed(app.prdPath + '/bower_components'))
+        .pipe(gulp.dest(app.prdPath + '/bower_components'))
 });
 /*
 *  图片任务
@@ -109,7 +110,7 @@ gulp.task('css',function () {
 gulp.task('cssInject',function(){
     gulp.src('./dist/index.html')
     .pipe($.inject(gulp.src('./dist/css/all.css',{read: false}),{relative: true}))
-    .pipe($.inject(gulp.src('./dist/bower_components/common/**/*.css',{read: false}),{name: 'bower',relative: true}))
+    .pipe($.inject(gulp.src('./dist/bower_components/gx-common/**/*.css',{read: false}),{name: 'bower',relative: true}))
     .pipe(gulp.dest('dist'));
 })
 
