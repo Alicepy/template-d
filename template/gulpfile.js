@@ -14,6 +14,7 @@ gulp.task('clean', function () {
     return gulp.src([app.devPath, app.prdPath,'tmp'])
     .pipe($.clean());
 });
+
 // 包管理文件
 gulp.task('vendor',function () {
     return gulp.src(['src/bower_components/**/*'])
@@ -32,11 +33,6 @@ return gulp.src('src/images/**/*')
 }))
     .pipe(gulp.dest(app.prdPath+'images'))
 });
-//   路由
-gulp.task('router',function () {
-return gulp.src('src/app/router/*.js')
-    .pipe(gulp.dest(app.prdPath+'app/router'))
-});
 
 /*
 *  html任务
@@ -44,7 +40,7 @@ return gulp.src('src/app/router/*.js')
 *  创建视图模版目录view，在其中存放视图view的模版
 */
 gulp.task('html', function () {
-    return gulp.src(['src/index.html'])
+    return gulp.src(['src/index_dist.html'])
       .pipe(gulp.dest(app.prdPath))
 })
 
@@ -64,6 +60,7 @@ var options = {
 };
 gulp.task('htmlTpl', function () {
     return gulp.src(app.srcPath + 'app/**/*.html')
+    .pipe($.changed(app.prdPath+'app'))
     .pipe($.htmlmin(options))
     .pipe(gulp.dest(app.prdPath+'app'))
 });
@@ -85,16 +82,24 @@ gulp.task('jshint', function () {
 
 
 gulp.task('js', function () {
-    return gulp.src('src/app/demo/**/*.js')
-    .pipe(gulp.dest(app.prdPath+'app/demo'))
+    return gulp.src('src/app/**/*.js')
+    .pipe($.changed(app.prdPath+'app'))
+    .pipe(gulp.dest(app.prdPath+'app'))
 });
 
-gulp.task('jscommon', function () {
-    return gulp.src('src/app/common/**/*.js')
-    .pipe($.ngAnnotate())
-    .pipe($.uglify())
-    .pipe(gulp.dest(app.prdPath+'app/common'))
-});
+//   路由
+// gulp.task('router',function () {
+//     return gulp.src('src/app/router/*.js')
+//         .pipe(gulp.dest(app.prdPath+'app/router'))
+// });
+    
+// gulp.task('jscommon', function () {
+//     return gulp.src('src/app/common/**/*.js')
+//     .pipe($.changed(app.prdPath+'app/common'))
+//     .pipe($.ngAnnotate())
+//     .pipe($.uglify())
+//     .pipe(gulp.dest(app.prdPath+'app/common'))
+// });
 
 /*
 *  css任务
@@ -128,13 +133,13 @@ gulp.task('serve',function () {
 gulp.task('demo_watch', function() {
     // 监听
     gulp.watch(app.srcPath + 'bower_components/**/*', ['vendor']);
-    gulp.watch(app.srcPath + '**/*.html', ['htmlTpl']);
+    gulp.watch(app.srcPath + 'app/**/*.html', ['htmlTpl']);
     gulp.watch(app.srcPath + 'css/**/*.css', ['css']);
-    gulp.watch(app.srcPath + 'app/common/**/*.js', ['jscommon']);
+    // gulp.watch(app.srcPath + 'app/common/**/*.js', ['jscommon']);
     gulp.watch(app.srcPath + 'app/demo/**/*.js', ['js']);
     gulp.watch(app.srcPath + 'images/**/*', ['images']);
-    gulp.watch(app.srcPath + 'index.html', ['html']);
-    gulp.watch(app.srcPath + 'app/router/*.js', ['router']);
+    gulp.watch(app.srcPath + 'index_dist.html', ['html']);
+    // gulp.watch(app.srcPath + 'app/router/*.js', ['router']);
 })
 
 // 定义default任务
@@ -147,6 +152,7 @@ gulp.task('build', [ 'html','htmlTpl','css','router','js','jscommon','vendor','i
     gulp.start('cssInject');
 });
   // 开发
-  gulp.task('dev', [ 'html','htmlTpl','css','router','js','jscommon','vendor','images','demo_watch' ],function(){
+  gulp.task('dev', [ 'html','htmlTpl','css','vendor','images','demo_watch' ],function(){
     gulp.start('cssInject');
+    gulp.start('js');
 });
