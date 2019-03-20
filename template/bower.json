@@ -1,12 +1,12 @@
 {
-  "name": "template-e",
+  "name": "template-d",
   "description": "bower",
   "main": "index.js",
   "authors": [
     "chen"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/Alicepy/template-e",
+  "homepage": "https://github.com/Alicepy/template-d",
   "ignore": [
     "**/.*",
     "node_modules",
