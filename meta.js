@@ -22,7 +22,8 @@ module.exports = {
         }
     },
     filters: {
-        'test':'test'
+        'test/**/*':'test',
+        'test/*':'test'
     },
     "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  npm install\n bower install\n"
 }
